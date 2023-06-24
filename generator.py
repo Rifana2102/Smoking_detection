@@ -81,7 +81,7 @@ def get_world_xy(rect):
     return x_world,y_world
 
 
-def pixelate_face(image, block_size=10):
+def pixelate_face(image, block_size=18):
 	# divide the input image into NxN blocks
 	(h, w) = image.shape[:2]
 	xSteps = np.linspace(0, w, int(w/block_size) + 1, dtype="int")
