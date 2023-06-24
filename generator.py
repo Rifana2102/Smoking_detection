@@ -132,12 +132,23 @@ def make_square_based_on_width(rect_a):
 
 t1 = time.time()
 
-### MODEL FOR PERSON TRACKING; INITIALIZE MODEL FOR STREAMING 
-model = YOLO('yolov8x.pt')
+### MODEL FOR PERSON TRACKING; CURRENTLY SET TO MEDIUM, UNCOMMENT THE DESIRED MODEL
+#model = YOLO('yolov8n.pt')
+#model = YOLO('yolov8s.pt')
+model = YOLO('yolov8m.pt')
+#model = YOLO('yolov8l.pt')
+#model = YOLO('yolov8x.pt')
+
 frame_results = model.track(source='input/'+fname, classes=0, stream=True, device=device)
 
-### MODEL FOR MASK DETECTION (CUSTOM TRAINED MODEL)
-mask_model = YOLO('models/mask_YOLOv8_xLarge.pt')
+
+### MODEL FOR MASK DETECTION (CUSTOM TRAINED MODEL); CURRENTLY SET TO MEDIUM, UNCOMMENT THE DESIRED MASK MODEL
+#mask_model = YOLO('models/mask_YOLOv8_nano.pt')
+#mask_model = YOLO('models/mask_YOLOv8_small.pt')
+mask_model = YOLO('models/mask_YOLOv8_medium.pt')
+#mask_model = YOLO('models/mask_YOLOv8_large.pt')
+#mask_model = YOLO('models/mask_YOLOv8_xLarge.pt')
+
 
 ### mask_dict = {id:[mask_status, mask_conf]}
 mask_dict = {}
