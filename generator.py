@@ -133,7 +133,7 @@ def make_square_based_on_width(rect_a):
 t1 = time.time()
 
 ### MODEL FOR PERSON TRACKING; INITIALIZE MODEL FOR STREAMING 
-model = YOLO('models/yolov8x.pt')
+model = YOLO('yolov8x.pt')
 frame_results = model.track(source='input/'+fname, classes=0, stream=True, device=device)
 
 ### MODEL FOR MASK DETECTION (CUSTOM TRAINED MODEL)
