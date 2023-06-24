@@ -6,9 +6,10 @@ Physical distancing and mask wearing behavior dataset generator from CCTV footag
 <summary>Install</summary>
 For a quickstart installation and usage example of YOLOv8, see the [YOLOv8 Docs] (https://docs.ultralytics.com) for full the documentation.  
 <br /><br />
-Pip install the ultralytics package including all [requirements](https://github.com/ultralytics/ultralytics/blob/main/requirements.txt) in a [**Python>=3.7**]environment with [**PyTorch>=1.7**](https://pytorch.org/get-started/locally/).
+Pip install the ultralytics package including all [requirements] in a [**Python>=3.7**] environment with [**PyTorch>=1.7**](https://pytorch.org/get-started/locally/).
 
 ```bash
+pip install -r requirements.txt
 pip install ultralytics
 ```
 
